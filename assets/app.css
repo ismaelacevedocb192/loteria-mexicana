@@ -99,7 +99,7 @@ body.jugador .tarjeta { color: var(--tinta); }
 .celda.marcada .frijol { display: grid; }
 .gritar { font-size: 26px; min-height: 64px; letter-spacing: 2px; width: 100%; }
 .gritar:disabled { opacity: .35; }
-.aviso { position: fixed; left: 8px; right: 8px; bottom: 84px; padding: 12px; border-radius: 12px; background: var(--azul); color: #fff; text-align: center; font-weight: 700; box-shadow: 0 6px 20px rgba(0,0,0,.5); }
+.aviso { position: fixed; left: 8px; right: 8px; top: 46px; padding: 8px 12px; font-size: .95rem; border-radius: 12px; background: var(--azul); color: #fff; text-align: center; font-weight: 700; box-shadow: 0 6px 20px rgba(0,0,0,.5); }
 .aviso.ok { background: var(--verde); } .aviso.mal { background: var(--rojo); } .aviso.fin { background: var(--amar); color: var(--tinta); }
 
 /* ---------- Mazos ---------- */

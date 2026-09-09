@@ -92,7 +92,7 @@
   $('alContinuar').onclick = async () => { await api('continuar'); $('alerta').classList.add('oculto'); ciclo(); };
   document.addEventListener('keydown', ev => {
     if (['INPUT', 'SELECT', 'TEXTAREA'].includes(ev.target.tagName)) return;
-    if (ev.code === 'Space' || ev.code === 'ArrowRight') { ev.preventDefault(); siguiente(); }
+    if (ev.code === 'Space' || ev.key === ' ' || ev.code === 'ArrowRight' || ev.key === 'ArrowRight') { ev.preventDefault(); siguiente(); }
     if (ev.key.toLowerCase() === 'p') $('btnPausa').click();
   });
 
