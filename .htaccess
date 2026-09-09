@@ -1,0 +1,9 @@
+Options -Indexes
+<FilesMatch "\.(sqlite|md|sql|json)$">
+  Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+  <FilesMatch "api\.php$">
+    Header set Cache-Control "no-store"
+  </FilesMatch>
+</IfModule>

@@ -1,0 +1,9 @@
+.git
+.claude
+docs
+tests
+tools
+*.sqlite
+config.local.php
+uploads/*
+!uploads/.gitkeep
