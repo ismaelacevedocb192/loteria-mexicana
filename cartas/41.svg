@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">41</text>
+<g><path d="M150 210 v110" stroke="#2b6f5c" stroke-width="7"/>
+  <path d="M150 270 q-40 -10 -50 -40 q35 0 50 40 z M150 290 q40 -10 50 -40 q-35 0 -50 40 z" fill="#2b6f5c"/>
+  <path d="M120 250 l-8 -10 M180 240 l8 -10" stroke="#2b6f5c" stroke-width="3"/>
+  <circle cx="150" cy="150" r="70" fill="#c8412b" stroke="#2a2a2a" stroke-width="3"/>
+  <path d="M150 90 q-50 10 -50 60 q0 40 50 55 q50 -15 50 -55 q0 -50 -50 -60" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <path d="M150 110 q-30 10 -30 40 q0 25 30 35 q30 -10 30 -35 q0 -30 -30 -40" fill="none" stroke="#2a2a2a" stroke-width="3"/>
+  <circle cx="150" cy="150" r="14" fill="#e58aa0" stroke="#2a2a2a" stroke-width="3"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Rosa</text>
+</svg>

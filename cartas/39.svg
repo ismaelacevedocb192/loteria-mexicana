@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">39</text>
+<g><path d="M60 325 h180" stroke="#8b5a2b" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="150" cy="250" rx="55" ry="75" fill="#2b6f5c" stroke="#2a2a2a" stroke-width="4"/>
+  <ellipse cx="95" cy="170" rx="35" ry="55" fill="#2b6f5c" stroke="#2a2a2a" stroke-width="4" transform="rotate(-25 95 170)"/>
+  <ellipse cx="205" cy="160" rx="35" ry="55" fill="#2b6f5c" stroke="#2a2a2a" stroke-width="4" transform="rotate(25 205 160)"/>
+  <g fill="#2a2a2a"><circle cx="130" cy="230" r="3"/><circle cx="170" cy="240" r="3"/><circle cx="150" cy="280" r="3"/><circle cx="140" cy="205" r="3"/><circle cx="90" cy="160" r="3"/><circle cx="100" cy="190" r="3"/><circle cx="205" cy="150" r="3"/><circle cx="200" cy="180" r="3"/></g>
+  <ellipse cx="85" cy="115" rx="12" ry="16" fill="#c8412b"/><ellipse cx="215" cy="105" rx="12" ry="16" fill="#c8412b"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Nopal</text>
+</svg>

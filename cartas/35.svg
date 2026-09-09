@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">35</text>
+<g><polygon points="150.0,95.0 175.9,164.3 249.9,167.6 191.9,213.6 211.7,284.9 150.0,244.1 88.3,284.9 108.1,213.6 50.1,167.6 124.1,164.3" fill="#e0a526"/><polygon points="150.0,135.0 166.0,177.9 211.8,179.9 176.0,208.4 188.2,252.6 150.0,227.3 111.8,252.6 124.0,208.4 88.2,179.9 134.0,177.9" fill="#c8412b"/><polygon points="150.0,172.0 156.9,190.5 176.6,191.3 161.2,203.6 166.5,222.7 150.0,211.8 133.5,222.7 138.8,203.6 123.4,191.3 143.1,190.5" fill="#f6e7c8"/><circle cx="60" cy="90" r="5" fill="#1f3a5f"/><circle cx="240" cy="90" r="5" fill="#1f3a5f"/><circle cx="70" cy="310" r="5" fill="#1f3a5f"/><circle cx="230" cy="310" r="5" fill="#1f3a5f"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Estrella</text>
+</svg>

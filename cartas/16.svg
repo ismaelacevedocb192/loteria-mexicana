@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">16</text>
+<g><rect x="60" y="80" width="10" height="250" fill="#8b5a2b"/><circle cx="65" cy="76" r="8" fill="#e0a526"/>
+  <path d="M70 90 h180 q-20 20 0 40 q-20 20 0 40 q-20 20 0 40 h-180 z" fill="#2b6f5c"/>
+  <path d="M130 90 h60 q-5 20 0 40 q-5 20 0 40 q-5 20 0 40 h-60 q5 -20 0 -40 q5 -20 0 -40 q5 -20 0 -40 z" fill="#f6e7c8"/>
+  <path d="M190 90 h60 q-20 20 0 40 q-20 20 0 40 q-20 20 0 40 h-60 q-5 -20 0 -40 q-5 -20 0 -40 q-5 -20 0 -40 z" fill="#c8412b"/>
+  <circle cx="158" cy="150" r="16" fill="#8b5a2b"/><path d="M148 140 q10 -12 20 0 q-10 20 -20 0 z" fill="#2b6f5c"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Bandera</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">50</text>
+<g><path d="M40 300 q30 -15 60 0 t60 0 t60 0 t40 0 v30 H40 z" fill="#7fb3d5"/>
+  <path d="M70 200 q60 -70 130 -20 q30 20 30 20 q-30 20 -30 20 q-70 50 -130 -20 z" fill="#e0a526" stroke="#2a2a2a" stroke-width="4"/>
+  <polygon points="230,200 265,160 265,240" fill="#e0a526" stroke="#2a2a2a" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M120 165 q30 -30 60 -10 l-10 20 z M120 235 q30 30 60 10 l-10 -20 z" fill="#c8412b"/>
+  <circle cx="100" cy="195" r="10" fill="#fff" stroke="#2a2a2a" stroke-width="2"/><circle cx="101" cy="195" r="4" fill="#2a2a2a"/>
+  <g fill="none" stroke="#2a2a2a" stroke-width="2"><path d="M140 180 q10 10 0 20 M160 175 q10 12 0 25 M180 175 q10 12 0 25"/></g>
+  <g fill="#7fb3d5"><circle cx="70" cy="150" r="5"/><circle cx="60" cy="130" r="4"/></g></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Pescado</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">14</text>
+<g><path d="M150 90 q-20 -5 -30 30 q-30 130 30 210 q60 -80 30 -210 q-10 -35 -30 -30 z" fill="#2a2a2a"/>
+  <circle cx="150" cy="140" r="36" fill="#f6e7c8" stroke="#2a2a2a" stroke-width="3"/>
+  <ellipse cx="136" cy="135" rx="9" ry="12" fill="#2a2a2a"/><ellipse cx="164" cy="135" rx="9" ry="12" fill="#2a2a2a"/>
+  <path d="M132 165 h36 M138 158 v14 M150 158 v14 M162 158 v14" stroke="#2a2a2a" stroke-width="3"/>
+  <path d="M100 170 l40 20 M215 100 q-25 40 -60 55" stroke="#8b5a2b" stroke-width="6" stroke-linecap="round"/>
+  <path d="M215 100 q40 -45 -10 -60 q-20 30 10 60 z" fill="#bbb" stroke="#2a2a2a" stroke-width="3"/>
+  <line x1="215" y1="100" x2="80" y2="330" stroke="#8b5a2b" stroke-width="6" stroke-linecap="round"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Muerte</text>
+</svg>

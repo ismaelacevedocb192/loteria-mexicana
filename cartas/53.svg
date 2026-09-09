@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">53</text>
+<g><path d="M90 320 v-200 q0 -50 60 -50 q60 0 90 60 v190 z" fill="none" stroke="#8b5a2b" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M90 320 h150" stroke="#8b5a2b" stroke-width="16" stroke-linecap="round"/>
+  <g stroke="#e0a526" stroke-width="2"><line x1="110" y1="120" x2="110" y2="315"/><line x1="128" y1="90" x2="128" y2="315"/><line x1="146" y1="75" x2="146" y2="315"/><line x1="164" y1="76" x2="164" y2="315"/><line x1="182" y1="86" x2="182" y2="315"/><line x1="200" y1="100" x2="200" y2="315"/><line x1="218" y1="118" x2="218" y2="315"/></g>
+  <circle cx="150" cy="70" r="12" fill="#e0a526" stroke="#2a2a2a" stroke-width="3"/>
+  <circle cx="90" cy="120" r="8" fill="#e0a526"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Arpa</text>
+</svg>

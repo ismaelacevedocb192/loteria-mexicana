@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">30</text>
+<g><path d="M80 150 q90 -70 150 20 q30 60 -20 110 q-30 30 -60 20 q40 -30 40 -80 q-10 -60 -110 -70 z" fill="#c8412b" stroke="#2a2a2a" stroke-width="4"/>
+  <g fill="none" stroke="#2a2a2a" stroke-width="2"><path d="M150 132 q30 40 20 80 M175 140 q25 40 10 80 M200 158 q15 40 0 70"/></g>
+  <circle cx="95" cy="160" r="5" fill="#2a2a2a"/>
+  <path d="M80 150 q-40 -40 -30 -80 M80 150 q-40 -10 -50 -50" stroke="#c8412b" stroke-width="3" fill="none"/>
+  <path d="M150 300 l-20 20 M165 300 l-5 25 M180 295 l10 20" stroke="#c8412b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M100 190 q0 40 20 60 M120 175 q10 50 40 70" stroke="#c8412b" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Camarón</text>
+</svg>

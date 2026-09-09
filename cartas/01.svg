@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">1</text>
+<g><ellipse cx="150" cy="230" rx="70" ry="55" fill="#c8412b" stroke="#2a2a2a" stroke-width="4"/>
+  <path d="M205 210 q60 -60 40 -110 q-10 40 -40 60 q20 -50 -10 -80 q-5 50 -30 70 z" fill="#2b6f5c" stroke="#2a2a2a" stroke-width="3"/>
+  <circle cx="105" cy="150" r="30" fill="#c8412b" stroke="#2a2a2a" stroke-width="4"/>
+  <path d="M95 122 q-5 -25 10 -25 q5 15 15 0 q10 0 8 20 z" fill="#c8412b"/>
+  <polygon points="75,150 50,158 75,166" fill="#e0a526"/>
+  <path d="M100 178 q-5 25 10 25 q5 -15 5 -25" fill="#c8412b"/>
+  <circle cx="98" cy="145" r="4" fill="#2a2a2a"/>
+  <rect x="120" y="280" width="8" height="40" fill="#e0a526"/><rect x="160" y="280" width="8" height="40" fill="#e0a526"/>
+  <path d="M110 320 h28 M150 320 h28" stroke="#e0a526" stroke-width="6"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Gallo</text>
+</svg>

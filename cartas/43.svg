@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">43</text>
+<g><path d="M150 90 q-15 0 -15 15 v10 q-55 20 -55 110 v40 h140 v-40 q0 -90 -55 -110 v-10 q0 -15 -15 -15 z" fill="#e0a526" stroke="#2a2a2a" stroke-width="4"/>
+  <rect x="60" y="265" width="180" height="20" rx="8" fill="#e0a526" stroke="#2a2a2a" stroke-width="4"/>
+  <circle cx="150" cy="300" r="16" fill="#2a2a2a"/>
+  <path d="M110 150 q-15 40 -10 90" stroke="#fff" stroke-width="5" fill="none" opacity=".5" stroke-linecap="round"/>
+  <path d="M60 130 q-15 40 0 80 M240 130 q15 40 0 80" stroke="#1f3a5f" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M150 80 v-15" stroke="#2a2a2a" stroke-width="4"/><circle cx="150" cy="60" r="6" fill="#2a2a2a"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Campana</text>
+</svg>

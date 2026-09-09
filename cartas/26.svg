@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">26</text>
+<g><rect x="118" y="230" width="26" height="90" rx="6" fill="#1f3a5f"/><rect x="156" y="230" width="26" height="90" rx="6" fill="#1f3a5f"/><rect x="105" y="165" width="90" height="80" rx="18" fill="#c8412b" stroke="#2a2a2a" stroke-width="3"/><rect x="80" y="172" width="24" height="70" rx="12" fill="#c8412b" stroke="#2a2a2a" stroke-width="3"/><rect x="196" y="172" width="24" height="70" rx="12" fill="#c8412b" stroke="#2a2a2a" stroke-width="3"/><rect x="112" y="312" width="38" height="16" rx="6" fill="#2a2a2a"/><rect x="150" y="312" width="38" height="16" rx="6" fill="#2a2a2a"/><circle cx="150.0" cy="130.0" r="34.0" fill="#7a4a2a" stroke="#2a2a2a" stroke-width="3"/><circle cx="138.1" cy="124.9" r="4.1" fill="#2a2a2a"/><circle cx="161.9" cy="124.9" r="4.1" fill="#2a2a2a"/><path d="M138.1 140.2 q11.9 10.2 23.8 0" stroke="#2a2a2a" stroke-width="3" fill="none"/><rect x="118" y="82" width="64" height="16" rx="4" fill="#e0a526"/><rect x="112" y="80" width="76" height="10" rx="4" fill="#2a2a2a"/>
+  <path d="M110 205 h80" stroke="#e0a526" stroke-width="6"/>
+  <line x1="215" y1="240" x2="240" y2="180" stroke="#8b5a2b" stroke-width="6" stroke-linecap="round"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Negrito</text>
+</svg>

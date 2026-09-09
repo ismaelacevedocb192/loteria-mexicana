@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">20</text>
+<g><path d="M60 300 q30 -30 60 0" stroke="#8b5a2b" stroke-width="8" fill="none"/>
+  <line x1="40" y1="290" x2="260" y2="290" stroke="#8b5a2b" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="150" cy="215" rx="55" ry="45" fill="#7fb3d5" stroke="#2a2a2a" stroke-width="3"/>
+  <path d="M120 215 q-10 -40 30 -40 q30 10 20 40 z" fill="#1f3a5f"/>
+  <circle cx="190" cy="180" r="26" fill="#7fb3d5" stroke="#2a2a2a" stroke-width="3"/>
+  <polygon points="212,175 245,185 212,192" fill="#e0a526"/><circle cx="195" cy="175" r="4" fill="#2a2a2a"/>
+  <path d="M95 225 q-50 10 -55 40 q30 -15 60 -15 z" fill="#1f3a5f"/>
+  <path d="M140 258 v30 M160 258 v30" stroke="#e0a526" stroke-width="4"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Pájaro</text>
+</svg>

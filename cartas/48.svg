@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<rect width="300" height="420" rx="14" fill="#f6e7c8"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
+<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">48</text>
+<g><path d="M40 300 q30 -15 60 0 t60 0 t60 0 t40 0 v30 H40 z" fill="#7fb3d5"/>
+  <path d="M55 250 q95 40 190 0 l-25 45 h-140 z" fill="#8b5a2b" stroke="#2a2a2a" stroke-width="4"/>
+  <path d="M55 250 q95 15 190 0" stroke="#c8412b" stroke-width="6" fill="none"/>
+  <g fill="#c8412b"><circle cx="80" cy="258" r="6"/><circle cx="120" cy="266" r="6"/><circle cx="180" cy="266" r="6"/><circle cx="220" cy="258" r="6"/></g>
+  <line x1="150" y1="250" x2="150" y2="110" stroke="#8b5a2b" stroke-width="6"/>
+  <path d="M150 115 h70 q-10 40 0 80 h-70 z" fill="#e0a526" stroke="#2a2a2a" stroke-width="3"/>
+  <circle cx="120.0" cy="205.0" r="16.0" fill="#e8b98a" stroke="#2a2a2a" stroke-width="3"/><circle cx="114.4" cy="202.6" r="1.9" fill="#2a2a2a"/><circle cx="125.6" cy="202.6" r="1.9" fill="#2a2a2a"/><path d="M114.4 209.8 q5.6 4.8 11.2 0" stroke="#2a2a2a" stroke-width="3" fill="none"/><rect x="106" y="220" width="28" height="30" rx="6" fill="#2b6f5c"/>
+  <line x1="60" y1="215" x2="100" y2="270" stroke="#8b5a2b" stroke-width="5" stroke-linecap="round"/></g>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Chalupa</text>
+</svg>

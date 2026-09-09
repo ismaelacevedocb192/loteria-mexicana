@@ -33,6 +33,8 @@ function getDB(): PDO {
     }
     if (dbDriver() === 'sqlite') $pdo->exec('PRAGMA foreign_keys = ON');
     crearTablas($pdo);
+    require_once __DIR__ . '/lib/mazo_clasico.php';
+    sembrarMazoClasico($pdo);
     return $pdo;
 }
 
