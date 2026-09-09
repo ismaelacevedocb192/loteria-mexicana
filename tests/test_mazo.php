@@ -30,3 +30,15 @@ test('getDB siembra el mazo clásico una sola vez', function () {
     $img = $pdo->query("SELECT imagen FROM cartas WHERE numero=7")->fetchColumn();
     assertEq('cartas/07.svg', $img);
 });
+
+test('nombres del mazo clásico según Wikipedia (2 El Diablo, 18 El Violonchelo)', function () {
+    assertEq('El Diablo', MAZO_CLASICO[1][1]);
+    assertEq('El Violonchelo', MAZO_CLASICO[17][1]);
+});
+
+test('la siembra corrige nombres viejos en una base existente', function () {
+    $pdo = getDB();
+    $pdo->exec("UPDATE cartas SET nombre='El Diablito' WHERE numero=2");
+    sembrarMazoClasico($pdo);
+    assertEq('El Diablo', $pdo->query("SELECT nombre FROM cartas WHERE numero=2")->fetchColumn());
+});

@@ -13,5 +13,5 @@
   <line x1="60" y1="120" x2="230" y2="290" stroke="#2a2a2a" stroke-width="4"/>
   <line x1="150" y1="325" x2="150" y2="345" stroke="#2a2a2a" stroke-width="4"/></g>
 <rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
-<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#f6e7c8">El Violoncello</text>
+<text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#f6e7c8">El Violonchelo</text>
 </svg>

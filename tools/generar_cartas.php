@@ -49,7 +49,7 @@ $f[1] = // El Gallo
   <rect x="120" y="280" width="8" height="40" fill="' . Y . '"/><rect x="160" y="280" width="8" height="40" fill="' . Y . '"/>
   <path d="M110 320 h28 M150 320 h28" stroke="' . Y . '" stroke-width="6"/>';
 
-$f[2] = // El Diablito
+$f[2] = // El Diablo
  persona(R, '<polygon points="122,102 112,70 138,96" fill="' . R . '" stroke="' . K . '" stroke-width="3"/>
   <polygon points="178,102 188,70 162,96" fill="' . R . '" stroke="' . K . '" stroke-width="3"/>
   <path d="M195 250 q60 20 40 70 q-5 -30 -30 -40" stroke="' . R . '" stroke-width="10" fill="none" stroke-linecap="round"/>
@@ -168,7 +168,7 @@ $f[17] = // El Bandolón
   <rect x="130" y="60" width="40" height="22" rx="4" fill="' . R . '"/>
   <rect x="125" y="292" width="50" height="10" rx="3" fill="' . K . '"/>';
 
-$f[18] = // El Violoncello
+$f[18] = // El Violonchelo
  '<path d="M150 120 q-55 0 -50 60 q10 20 -5 40 q-40 50 5 100 q30 20 50 5 q20 15 50 -5 q45 -50 5 -100 q-15 -20 -5 -40 q5 -60 -50 -60 z" fill="' . CAFE . '" stroke="' . K . '" stroke-width="4"/>
   <rect x="142" y="55" width="16" height="90" fill="' . K . '"/><rect x="136" y="50" width="28" height="18" rx="4" fill="' . K . '"/>
   <g stroke="' . Y . '" stroke-width="1.5"><line x1="145" y1="70" x2="145" y2="300"/><line x1="150" y1="70" x2="150" y2="300"/><line x1="155" y1="70" x2="155" y2="300"/></g>
