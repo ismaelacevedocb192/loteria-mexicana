@@ -29,7 +29,22 @@ function getDB(): PDO {
             : new PDO(dbDsn(), DB_USER, DB_PASS, $opts);
     } catch (PDOException $e) {
         http_response_code(500);
-        die('Error de conexión a la base de datos: ' . htmlspecialchars($e->getMessage()));
+        $local = __DIR__ . '/config.local.php';
+        $hayLocal = file_exists($local) ? 'sí existe' : 'NO existe';
+        $usandoDefault = DB_USER === 'root' && DB_PASS === '';
+        echo '<!doctype html><meta charset="utf-8"><title>Configuración pendiente</title>'
+           . '<body style="font-family:system-ui;max-width:700px;margin:40px auto;line-height:1.5">'
+           . '<h1>No se pudo conectar a la base de datos</h1>'
+           . '<p><b>Detalle:</b> ' . htmlspecialchars($e->getMessage()) . '</p>'
+           . ($usandoDefault ? '<p>Se están usando las credenciales por defecto (usuario <code>root</code> sin contraseña), así que <b>no se leyó tu configuración</b>.</p>' : '')
+           . '<p>Archivo esperado: <code>' . htmlspecialchars($local) . '</code> &rarr; <b>' . $hayLocal . '</b>.</p>'
+           . '<p>Crea ese archivo (en la misma carpeta que <code>index.php</code>) con:</p>'
+           . '<pre style="background:#f3f3f3;padding:12px;border-radius:8px">&lt;?php
+define(\'DB_DSN\', \'mysql:host=localhost;dbname=NOMBRE_BD;charset=utf8mb4\');
+define(\'DB_USER\', \'USUARIO_BD\');
+define(\'DB_PASS\', \'CONTRASEÑA\');</pre>'
+           . '<p>La base de datos debe existir y el usuario tener privilegios sobre ella; las tablas se crean solas.</p></body>';
+        exit;
     }
     if (dbDriver() === 'sqlite') $pdo->exec('PRAGMA foreign_keys = ON');
     crearTablas($pdo);
