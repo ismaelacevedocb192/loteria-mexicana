@@ -383,15 +383,15 @@ $f[44] = // El Cantarito
   <path d="M95 160 q-5 60 10 110" stroke="#fff" stroke-width="4" fill="none" opacity=".35"/>';
 
 $f[45] = // El Venado
- '<path d="M60 325 h180" stroke="' . G . '" stroke-width="6" stroke-linecap="round"/>
-  <ellipse cx="160" cy="230" rx="60" ry="38" fill="' . CAFE . '" stroke="' . K . '" stroke-width="4"/>
-  <g stroke="' . CAFE . '" stroke-width="10" stroke-linecap="round"><line x1="115" y1="255" x2="105" y2="320"/><line x1="140" y1="262" x2="140" y2="320"/><line x1="180" y1="262" x2="185" y2="320"/><line x1="205" y1="255" x2="215" y2="320"/></g>
-  <path d="M105 210 q-10 -50 5 -80" stroke="' . CAFE . '" stroke-width="16" fill="none" stroke-linecap="round"/>
-  <ellipse cx="105" cy="125" rx="24" ry="20" fill="' . CAFE . '" stroke="' . K . '" stroke-width="4"/>
-  <ellipse cx="82" cy="130" rx="10" ry="7" fill="' . K . '"/><circle cx="100" cy="118" r="3" fill="' . K . '"/>
-  <g stroke="' . K . '" stroke-width="5" fill="none" stroke-linecap="round"><path d="M100 108 q-10 -40 -30 -55 M92 100 q-25 -20 -45 -20 M95 105 q-5 -30 5 -50"/><path d="M118 105 q10 -40 30 -55 M122 100 q25 -20 45 -20 M120 103 q5 -30 -5 -50"/></g>
-  <circle cx="150" cy="215" r="6" fill="' . CREMA . '"/><circle cx="175" cy="235" r="6" fill="' . CREMA . '"/><circle cx="195" cy="215" r="6" fill="' . CREMA . '"/>
-  <path d="M215 215 q15 -10 20 5" stroke="' . CAFE . '" stroke-width="8" fill="none" stroke-linecap="round"/>';
+ '<g transform="translate(0,22)"><path d="M60 303 h180" stroke="' . G . '" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="160" cy="215" rx="60" ry="38" fill="' . CAFE . '" stroke="' . K . '" stroke-width="4"/>
+  <g stroke="' . CAFE . '" stroke-width="10" stroke-linecap="round"><line x1="115" y1="240" x2="105" y2="300"/><line x1="140" y1="248" x2="140" y2="300"/><line x1="180" y1="248" x2="185" y2="300"/><line x1="205" y1="240" x2="215" y2="300"/></g>
+  <path d="M105 195 q-10 -50 5 -80" stroke="' . CAFE . '" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <ellipse cx="105" cy="110" rx="24" ry="20" fill="' . CAFE . '" stroke="' . K . '" stroke-width="4"/>
+  <ellipse cx="82" cy="115" rx="10" ry="7" fill="' . K . '"/><circle cx="100" cy="103" r="3" fill="' . K . '"/>
+  <g stroke="' . K . '" stroke-width="5" fill="none" stroke-linecap="round"><path d="M100 93 q-8 -30 -25 -42 M94 88 q-20 -12 -38 -12 M96 90 q-4 -22 4 -38"/><path d="M118 90 q8 -30 25 -42 M122 86 q20 -12 38 -12 M120 88 q4 -22 -4 -38"/></g>
+  <circle cx="150" cy="200" r="6" fill="' . CREMA . '"/><circle cx="175" cy="220" r="6" fill="' . CREMA . '"/><circle cx="195" cy="200" r="6" fill="' . CREMA . '"/>
+  <path d="M215 200 q15 -10 20 5" stroke="' . CAFE . '" stroke-width="8" fill="none" stroke-linecap="round"/></g>';
 
 $f[46] = // El Sol
  '<g stroke="' . Y . '" stroke-width="14" stroke-linecap="round">' . implode('', array_map(fn($a) =>
@@ -456,11 +456,12 @@ $f[52] = // La Maceta
   <circle cx="150" cy="120" r="9" fill="' . Y . '"/>';
 
 $f[53] = // El Arpa
- '<path d="M90 320 v-200 q0 -50 60 -50 q60 0 90 60 v190 z" fill="none" stroke="' . CAFE . '" stroke-width="14" stroke-linejoin="round"/>
-  <path d="M90 320 h150" stroke="' . CAFE . '" stroke-width="16" stroke-linecap="round"/>
-  <g stroke="' . Y . '" stroke-width="2"><line x1="110" y1="120" x2="110" y2="315"/><line x1="128" y1="90" x2="128" y2="315"/><line x1="146" y1="75" x2="146" y2="315"/><line x1="164" y1="76" x2="164" y2="315"/><line x1="182" y1="86" x2="182" y2="315"/><line x1="200" y1="100" x2="200" y2="315"/><line x1="218" y1="118" x2="218" y2="315"/></g>
-  <circle cx="150" cy="70" r="12" fill="' . Y . '" stroke="' . K . '" stroke-width="3"/>
-  <circle cx="90" cy="120" r="8" fill="' . Y . '"/>';
+ '<g stroke="' . Y . '" stroke-width="2"><line x1="120" y1="75" x2="120" y2="302"/><line x1="140" y1="68" x2="140" y2="265"/><line x1="160" y1="68" x2="160" y2="229"/><line x1="180" y1="75" x2="180" y2="192"/><line x1="200" y1="88" x2="200" y2="156"/></g>
+  <path d="M85 320 v-225 q65 -70 140 15 l-115 210 z" fill="none" stroke="' . CAFE . '" stroke-width="14" stroke-linejoin="round"/>
+  <path d="M225 110 l-115 210" stroke="' . CAFE . '" stroke-width="26" stroke-linecap="round"/>
+  <path d="M85 320 h35" stroke="' . CAFE . '" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="85" cy="95" r="10" fill="' . Y . '" stroke="' . K . '" stroke-width="3"/><circle cx="225" cy="110" r="10" fill="' . Y . '" stroke="' . K . '" stroke-width="3"/>
+  <circle cx="85" cy="320" r="8" fill="' . Y . '"/>';
 
 $f[54] = // La Rana
  '<ellipse cx="150" cy="180" rx="80" ry="45" fill="' . CIELO . '" opacity=".5"/>

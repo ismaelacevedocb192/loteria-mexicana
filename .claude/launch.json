@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "loteria-dev",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "DB_DSN=sqlite:$PWD/local.sqlite exec php -S 127.0.0.1:8080"],
+      "port": 8080
+    }
+  ]
+}
