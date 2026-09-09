@@ -2,3 +2,4 @@ uploads/*
 !uploads/.gitkeep
 *.sqlite
 config.local.php
+loteria-servidor.zip
