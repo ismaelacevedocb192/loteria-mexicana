@@ -37,10 +37,10 @@ form .btn { margin-top: 14px; width: 100%; }
 .lista a.activo { font-weight: 700; }
 
 /* Carta genérica (proporción 300x420) */
-.carta { aspect-ratio: 300 / 420; border-radius: 10px; overflow: hidden; background: var(--crema); box-shadow: 0 3px 10px rgba(0,0,0,.35); }
+.carta { container-type: inline-size; aspect-ratio: 300 / 420; border-radius: 10px; overflow: hidden; background: var(--crema); box-shadow: 0 3px 10px rgba(0,0,0,.35); }
 .carta img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .carta-texto { width: 100%; height: 100%; display: grid; place-items: center; color: #fff; font-weight: 700; text-align: center; padding: 6px;
-               font-family: Georgia, serif; text-shadow: 0 1px 3px rgba(0,0,0,.5); font-size: clamp(11px, 2.6vw, 22px); line-height: 1.2; overflow: hidden; }
+               font-family: Georgia, serif; text-shadow: 0 1px 3px rgba(0,0,0,.5); font-size: clamp(10px, 13cqw, 26px); line-height: 1.15; overflow: hidden; overflow-wrap: anywhere; hyphens: auto; }
 @keyframes sacudir { 0%,100% { transform: translateX(0) } 20% { transform: translateX(-7px) } 40% { transform: translateX(7px) } 60% { transform: translateX(-5px) } 80% { transform: translateX(5px) } }
 .sacudir { animation: sacudir .3s; }
 
