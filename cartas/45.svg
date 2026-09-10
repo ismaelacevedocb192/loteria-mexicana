@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
 <rect width="300" height="420" rx="14" fill="#f6e7c8"/>
-<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
-<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
-<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
-<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#ce1126" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#006847" stroke-width="1.5"/>
+<g fill="#006847"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/></g>
+<g fill="#ce1126"><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#006847"/>
 <text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">45</text>
 <g><g transform="translate(0,22)"><path d="M60 303 h180" stroke="#2b6f5c" stroke-width="6" stroke-linecap="round"/>
   <ellipse cx="160" cy="215" rx="60" ry="38" fill="#8b5a2b" stroke="#2a2a2a" stroke-width="4"/>
@@ -14,6 +15,7 @@
   <g stroke="#2a2a2a" stroke-width="5" fill="none" stroke-linecap="round"><path d="M100 93 q-8 -30 -25 -42 M94 88 q-20 -12 -38 -12 M96 90 q-4 -22 4 -38"/><path d="M118 90 q8 -30 25 -42 M122 86 q20 -12 38 -12 M120 88 q4 -22 -4 -38"/></g>
   <circle cx="150" cy="200" r="6" fill="#f6e7c8"/><circle cx="175" cy="220" r="6" fill="#f6e7c8"/><circle cx="195" cy="200" r="6" fill="#f6e7c8"/>
   <path d="M215 200 q15 -10 20 5" stroke="#8b5a2b" stroke-width="8" fill="none" stroke-linecap="round"/></g></g>
-<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#006847"/>
+<rect x="24" y="386" width="252" height="4" rx="2" fill="#ce1126"/>
 <text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Venado</text>
 </svg>

@@ -13,7 +13,8 @@ if (!$p) {
 ?>
 <div id="entrar" class="centro">
   <form class="tarjeta" id="formNombre">
-    <h1>🎉 Lotería</h1>
+    <div class="tricolor"></div>
+    <h1>🎉 Lotería Mexicana</h1>
     <p>Partida <b><?= h($codigo) ?></b></p>
     <label for="nombre">Tu nombre</label>
     <input name="nombre" id="nombre" maxlength="30" required autocomplete="off" autofocus placeholder="Escribe tu nombre">

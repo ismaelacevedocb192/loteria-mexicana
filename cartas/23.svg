@@ -1,13 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
 <rect width="300" height="420" rx="14" fill="#f6e7c8"/>
-<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
-<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
-<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
-<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#ce1126" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#006847" stroke-width="1.5"/>
+<g fill="#006847"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/></g>
+<g fill="#ce1126"><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#006847"/>
 <text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">23</text>
 <g><circle cx="150" cy="200" r="90" fill="#e0a526"/><circle cx="190" cy="185" r="78" fill="#f6e7c8"/>
   <circle cx="118" cy="175" r="6" fill="#2a2a2a"/><path d="M105 225 q15 15 30 0" stroke="#2a2a2a" stroke-width="5" fill="none"/>
   <polygon points="235.0,94.0 238.9,104.6 250.2,105.1 241.4,112.1 244.4,122.9 235.0,116.7 225.6,122.9 228.6,112.1 219.8,105.1 231.1,104.6" fill="#e0a526"/><polygon points="60.0,110.0 62.5,116.6 69.5,116.9 64.0,121.3 65.9,128.1 60.0,124.2 54.1,128.1 56.0,121.3 50.5,116.9 57.5,116.6" fill="#e0a526"/><polygon points="230.0,290.0 232.5,296.6 239.5,296.9 234.0,301.3 235.9,308.1 230.0,304.2 224.1,308.1 226.0,301.3 220.5,296.9 227.5,296.6" fill="#e0a526"/></g>
-<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#006847"/>
+<rect x="24" y="386" width="252" height="4" rx="2" fill="#ce1126"/>
 <text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Luna</text>
 </svg>

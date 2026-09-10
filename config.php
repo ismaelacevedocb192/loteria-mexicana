@@ -12,6 +12,9 @@ if (!defined('DB_PASS')) define('DB_PASS', getenv('DB_PASS') ?: '');
 // Si no está vacía, presentador.php, index.php, mazos.php y las acciones de presentador la exigen (?k=clave).
 if (!defined('PRESENTADOR_CLAVE')) define('PRESENTADOR_CLAVE', getenv('PRESENTADOR_CLAVE') ?: '');
 
+// Texto de la cintilla inferior. Vacío ('') la oculta.
+if (!defined('INSTITUCION')) define('INSTITUCION', getenv('INSTITUCION') ?: 'Academia Local de Humanidades');
+
 // Cada cuánto consultan el servidor la pantalla grande y los teléfonos.
 if (!defined('INTERVALO_SONDEO_MS')) define('INTERVALO_SONDEO_MS', 1500);
 

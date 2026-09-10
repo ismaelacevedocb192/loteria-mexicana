@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
 <rect width="300" height="420" rx="14" fill="#f6e7c8"/>
-<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
-<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
-<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
-<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#ce1126" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#006847" stroke-width="1.5"/>
+<g fill="#006847"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/></g>
+<g fill="#ce1126"><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#006847"/>
 <text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">52</text>
 <g><path d="M90 230 h120 l-15 90 h-90 z" fill="#c8412b" stroke="#2a2a2a" stroke-width="4" stroke-linejoin="round"/>
   <rect x="80" y="215" width="140" height="22" rx="4" fill="#c8412b" stroke="#2a2a2a" stroke-width="4"/>
@@ -12,6 +13,7 @@
   <path d="M150 180 q-40 -5 -50 -35 q35 0 50 35 z M150 195 q40 -5 50 -35 q-35 0 -50 35 z" fill="#2b6f5c"/>
   <g fill="#e58aa0"><circle cx="150" cy="115" r="14"/><circle cx="130" cy="130" r="14"/><circle cx="170" cy="130" r="14"/><circle cx="135" cy="105" r="14"/><circle cx="165" cy="105" r="14"/></g>
   <circle cx="150" cy="120" r="9" fill="#e0a526"/></g>
-<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#006847"/>
+<rect x="24" y="386" width="252" height="4" rx="2" fill="#ce1126"/>
 <text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Maceta</text>
 </svg>

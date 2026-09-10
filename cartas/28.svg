@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
 <rect width="300" height="420" rx="14" fill="#f6e7c8"/>
-<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
-<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
-<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
-<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#ce1126" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#006847" stroke-width="1.5"/>
+<g fill="#006847"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/></g>
+<g fill="#ce1126"><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#006847"/>
 <text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">28</text>
 <g><path d="M50 190 a100 100 0 0 0 200 0 z" fill="#2b6f5c" stroke="#2a2a2a" stroke-width="4"/>
   <path d="M65 190 a85 85 0 0 0 170 0 z" fill="#f6e7c8"/>
@@ -11,6 +12,7 @@
   <path d="M50 190 h200" stroke="#2a2a2a" stroke-width="4"/>
   <g fill="#2a2a2a"><ellipse cx="110" cy="215" rx="5" ry="8"/><ellipse cx="150" cy="240" rx="5" ry="8"/><ellipse cx="190" cy="215" rx="5" ry="8"/><ellipse cx="130" cy="205" rx="4" ry="6"/><ellipse cx="170" cy="205" rx="4" ry="6"/><ellipse cx="150" cy="212" rx="4" ry="6"/></g>
   <path d="M60 110 q90 -50 180 0" stroke="#2b6f5c" stroke-width="10" fill="none" stroke-linecap="round"/></g>
-<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#006847"/>
+<rect x="24" y="386" width="252" height="4" rx="2" fill="#ce1126"/>
 <text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Sandía</text>
 </svg>

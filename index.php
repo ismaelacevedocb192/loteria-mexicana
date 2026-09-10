@@ -10,7 +10,8 @@ cabecera('Inicio', 'portada');
 ?>
 <main class="centro">
   <div class="tarjeta">
-    <h1>🎉 Lotería</h1>
+    <div class="tricolor"></div>
+    <h1>🎉 Lotería Mexicana</h1>
     <form id="nueva">
       <label for="mazo_id">Mazo</label>
       <select name="mazo_id" id="mazo_id"><?php foreach ($mazos as $m): ?>

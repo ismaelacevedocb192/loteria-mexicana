@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
 <rect width="300" height="420" rx="14" fill="#f6e7c8"/>
-<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
-<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
-<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
-<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#ce1126" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#006847" stroke-width="1.5"/>
+<g fill="#006847"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/></g>
+<g fill="#ce1126"><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#006847"/>
 <text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">6</text>
 <g><path d="M40 300 q30 -15 60 0 t60 0 t60 0 t40 0 v30 H40 z" fill="#7fb3d5"/>
   <path d="M120 200 q-10 70 30 100 q20 -20 10 -40 q40 -10 60 20 q10 -60 -50 -80 z" fill="#2b6f5c" stroke="#2a2a2a" stroke-width="3"/>
@@ -11,6 +12,7 @@
   <path d="M112 160 q38 -20 76 0 v45 q-38 10 -76 0 z" fill="#e8b98a" stroke="#2a2a2a" stroke-width="3"/>
   <circle cx="135" cy="182" r="10" fill="#e58aa0"/><circle cx="165" cy="182" r="10" fill="#e58aa0"/>
   <path d="M110 100 q40 -45 80 0 v70 q-15 -10 -12 -40 q-28 15 -56 0 q3 30 -12 40 z" fill="#8b5a2b"/><circle cx="150.0" cy="122.0" r="30.0" fill="#e8b98a" stroke="#2a2a2a" stroke-width="3"/><circle cx="139.5" cy="117.5" r="3.6" fill="#2a2a2a"/><circle cx="160.5" cy="117.5" r="3.6" fill="#2a2a2a"/><path d="M139.5 131.0 q10.5 9.0 21.0 0" stroke="#2a2a2a" stroke-width="3" fill="none"/><polygon points="70.0,98.0 73.0,105.9 81.4,106.3 74.8,111.6 77.1,119.7 70.0,115.0 62.9,119.7 65.2,111.6 58.6,106.3 67.0,105.9" fill="#e0a526"/><polygon points="235.0,121.0 237.2,126.9 243.6,127.2 238.6,131.2 240.3,137.3 235.0,133.8 229.7,137.3 231.4,131.2 226.4,127.2 232.8,126.9" fill="#e0a526"/></g>
-<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#006847"/>
+<rect x="24" y="386" width="252" height="4" rx="2" fill="#ce1126"/>
 <text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">La Sirena</text>
 </svg>

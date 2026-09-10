@@ -78,7 +78,7 @@ $f[4] = // El Catrín
 $f[5] = // El Paraguas
  '<path d="M50 200 q100 -130 200 0 z" fill="' . R . '" stroke="' . K . '" stroke-width="4"/>
   <path d="M50 200 q25 -20 50 0 q25 -20 50 0 q25 -20 50 0 q25 -20 50 0" fill="none" stroke="' . K . '" stroke-width="4"/>
-  <path d="M150 90 v-15" stroke="' . K . '" stroke-width="5"/>
+  <path d="M150 138 v-26" stroke="' . K . '" stroke-width="5" stroke-linecap="round"/>
   <path d="M150 200 v100 q0 25 -22 25 q-18 0 -18 -18" stroke="' . CAFE . '" stroke-width="8" fill="none" stroke-linecap="round"/>
   <g fill="' . CIELO . '"><ellipse cx="70" cy="250" rx="4" ry="9"/><ellipse cx="230" cy="260" rx="4" ry="9"/><ellipse cx="95" cy="300" rx="4" ry="9"/><ellipse cx="205" cy="310" rx="4" ry="9"/></g>';
 
@@ -479,13 +479,15 @@ function carta_svg(int $n, string $nombre, string $figura): string {
     return <<<SVG
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
 <rect width="300" height="420" rx="14" fill="#f6e7c8"/>
-<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
-<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
-<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
-<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#ce1126" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#006847" stroke-width="1.5"/>
+<g fill="#006847"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/></g>
+<g fill="#ce1126"><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#006847"/>
 <text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">$n</text>
 <g>$figura</g>
-<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#006847"/>
+<rect x="24" y="386" width="252" height="4" rx="2" fill="#ce1126"/>
 <text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="$tam" font-weight="bold" fill="#f6e7c8">$nom</text>
 </svg>
 SVG;

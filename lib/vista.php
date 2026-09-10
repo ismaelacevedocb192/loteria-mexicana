@@ -23,11 +23,16 @@ function cabecera(string $titulo, string $clase = ''): void {
     $k = PRESENTADOR_CLAVE !== '' && claveOk() ? ($_COOKIE['lot_k'] ?? $_GET['k'] ?? '') : '';
     echo '<!doctype html><html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>' . h($titulo) . ' · Lotería</title>
+<title>' . h($titulo) . ' · Lotería Mexicana</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🎉%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/app.css?v=1">
 <script>window.LOT={sondeo:' . (int)INTERVALO_SONDEO_MS . ',k:' . json_encode($k) . '};</script>
 </head><body class="' . h($clase) . '">';
 }
 
-function pie(): void { echo '</body></html>'; }
+function cintilla(): void {
+    if (INSTITUCION === '') return;
+    echo '<footer class="cintilla"><span>' . h(INSTITUCION) . '</span></footer>';
+}
+
+function pie(): void { cintilla(); echo '</body></html>'; }

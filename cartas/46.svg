@@ -1,15 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
 <rect width="300" height="420" rx="14" fill="#f6e7c8"/>
-<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#8b2f1f" stroke-width="4"/>
-<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#8b2f1f" stroke-width="1.5"/>
-<g fill="#8b2f1f"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
-<circle cx="150" cy="46" r="22" fill="#1f3a5f"/>
+<rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#ce1126" stroke-width="4"/>
+<rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#006847" stroke-width="1.5"/>
+<g fill="#006847"><circle cx="24" cy="24" r="5"/><circle cx="276" cy="24" r="5"/></g>
+<g fill="#ce1126"><circle cx="24" cy="396" r="5"/><circle cx="276" cy="396" r="5"/></g>
+<circle cx="150" cy="46" r="22" fill="#006847"/>
 <text x="150" y="53" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#f6e7c8">46</text>
 <g><g stroke="#e0a526" stroke-width="14" stroke-linecap="round"><line x1="250" y1="200" x2="280" y2="200"/><line x1="237" y1="250" x2="263" y2="265"/><line x1="200" y1="287" x2="215" y2="313"/><line x1="150" y1="300" x2="150" y2="330"/><line x1="100" y1="287" x2="85" y2="313"/><line x1="63" y1="250" x2="37" y2="265"/><line x1="50" y1="200" x2="20" y2="200"/><line x1="63" y1="150" x2="37" y2="135"/><line x1="100" y1="113" x2="85" y2="87"/><line x1="150" y1="100" x2="150" y2="70"/><line x1="200" y1="113" x2="215" y2="87"/><line x1="237" y1="150" x2="263" y2="135"/></g>
   <circle cx="150" cy="200" r="85" fill="#e0a526" stroke="#c8412b" stroke-width="6"/>
   <circle cx="125" cy="185" r="7" fill="#2a2a2a"/><circle cx="175" cy="185" r="7" fill="#2a2a2a"/>
   <path d="M120 225 q30 25 60 0" stroke="#2a2a2a" stroke-width="6" fill="none"/>
   <circle cx="110" cy="215" r="9" fill="#c8412b" opacity=".5"/><circle cx="190" cy="215" r="9" fill="#c8412b" opacity=".5"/></g>
-<rect x="24" y="346" width="252" height="44" rx="8" fill="#1f3a5f"/>
+<rect x="24" y="346" width="252" height="44" rx="8" fill="#006847"/>
+<rect x="24" y="386" width="252" height="4" rx="2" fill="#ce1126"/>
 <text x="150" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#f6e7c8">El Sol</text>
 </svg>
