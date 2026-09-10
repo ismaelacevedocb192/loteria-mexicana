@@ -3,6 +3,20 @@ require_once __DIR__ . '/http.php';
 
 function h($s): string { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8'); }
 
+/**
+ * Sello de versión de los archivos estáticos: la fecha del CSS y de las cartas.
+ * Cambia solo al actualizar la app, así el navegador vuelve a pedir CSS, JS e imágenes.
+ */
+function assetVer(): string {
+    static $v = null;
+    if ($v !== null) return $v;
+    $t = 0;
+    foreach ([__DIR__ . '/../assets/app.css', __DIR__ . '/../cartas/01.svg'] as $f) {
+        if (file_exists($f)) $t = max($t, (int)filemtime($f));
+    }
+    return $v = (string)($t ?: time());
+}
+
 /** Páginas de presentador: si hay clave configurada, la exige (?k= o cookie). */
 function exigirClaveVista(): void {
     if (PRESENTADOR_CLAVE === '') return;
@@ -25,8 +39,8 @@ function cabecera(string $titulo, string $clase = ''): void {
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>' . h($titulo) . ' · Lotería Mexicana</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🎉%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/app.css?v=1">
-<script>window.LOT={sondeo:' . (int)INTERVALO_SONDEO_MS . ',k:' . json_encode($k) . '};</script>
+<link rel="stylesheet" href="assets/app.css?v=' . assetVer() . '">
+<script>window.LOT={sondeo:' . (int)INTERVALO_SONDEO_MS . ',k:' . json_encode($k) . ',v:' . json_encode(assetVer()) . '};</script>
 </head><body class="' . h($clase) . '">';
 }
 

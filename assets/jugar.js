@@ -10,7 +10,7 @@
   };
   const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const cartaHTML = c => c.imagen
-    ? `<img src="${esc(c.imagen)}" alt="${esc(c.nombre)}" draggable="false">`
+    ? `<img src="${esc(c.imagen)}?v=${LOT.v}" alt="${esc(c.nombre)}" draggable="false">`
     : `<div class="carta-texto" style="background:hsl(${(c.numero * 47) % 360},55%,45%)">${c.numero}<br>${esc(c.nombre)}</div>`;
 
   function pintarTablero() {

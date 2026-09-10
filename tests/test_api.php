@@ -160,3 +160,38 @@ test('jugador con token inválido recibe error', function () {
     assertTrue(!$r['ok']);
     assertEq('Jugador no encontrado', $r['error']);
 });
+
+test('borrar_partida elimina la partida y todo lo suyo', function () {
+    $pdo = getDB();
+    $cod = llamar('crear_partida', ['mazo_id' => mazoDefault()])['codigo'];
+    $j = llamar('unirse', ['codigo' => $cod, 'nombre' => 'Efímero']);
+    llamar('iniciar', ['codigo' => $cod]);
+    $tablero = array_column($j['tablero'], 'id');
+    $orden = json_decode($pdo->query("SELECT orden_cartas FROM partidas WHERE codigo='$cod'")->fetchColumn(), true);
+    llamar('marcar', ['token' => $j['token'], 'carta_id' => $orden[0]]);
+    $pid = (int)$pdo->query("SELECT id FROM partidas WHERE codigo='$cod'")->fetchColumn();
+    $jid = (int)$pdo->query("SELECT id FROM jugadores WHERE partida_id=$pid")->fetchColumn();
+
+    assertTrue(llamar('borrar_partida', ['codigo' => $cod])['ok']);
+    assertEq(0, (int)$pdo->query("SELECT COUNT(*) FROM partidas WHERE id=$pid")->fetchColumn());
+    assertEq(0, (int)$pdo->query("SELECT COUNT(*) FROM jugadores WHERE partida_id=$pid")->fetchColumn());
+    assertEq(0, (int)$pdo->query("SELECT COUNT(*) FROM marcas WHERE jugador_id=$jid")->fetchColumn());
+    assertEq(0, (int)$pdo->query("SELECT COUNT(*) FROM gritos WHERE partida_id=$pid")->fetchColumn());
+    assertTrue(!llamar('borrar_partida', ['codigo' => $cod])['ok'], 'ya no existe');
+    assertTrue(!llamar('estado_jugador', ['token' => $j['token']])['ok'], 'el jugador queda sin partida');
+});
+
+test('borrar_partidas_terminadas solo borra las terminadas', function () {
+    $pdo = getDB();
+    $viva = llamar('crear_partida', ['mazo_id' => mazoDefault()])['codigo'];
+    $muerta = llamar('crear_partida', ['mazo_id' => mazoDefault()])['codigo'];
+    llamar('unirse', ['codigo' => $muerta, 'nombre' => 'X']);
+    llamar('iniciar', ['codigo' => $muerta]);
+    llamar('terminar', ['codigo' => $muerta]);
+    $r = llamar('borrar_partidas_terminadas');
+    assertTrue($r['ok']);
+    assertTrue($r['borradas'] >= 1);
+    assertEq(0, (int)$pdo->query("SELECT COUNT(*) FROM partidas WHERE codigo='$muerta'")->fetchColumn());
+    assertEq(1, (int)$pdo->query("SELECT COUNT(*) FROM partidas WHERE codigo='$viva'")->fetchColumn());
+    assertEq(0, (int)$pdo->query("SELECT COUNT(*) FROM partidas WHERE estado='terminada'")->fetchColumn());
+});

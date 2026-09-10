@@ -6,6 +6,7 @@ $pdo = getDB();
 $mazos = $pdo->query("SELECT m.id, m.nombre, (SELECT COUNT(*) FROM cartas c WHERE c.mazo_id=m.id) AS n FROM mazos m ORDER BY es_default DESC, nombre")->fetchAll();
 $partidas = $pdo->query("SELECT p.codigo, p.estado, p.creada, m.nombre AS mazo, (SELECT COUNT(*) FROM jugadores j WHERE j.partida_id=p.id) AS jugadores
                          FROM partidas p JOIN mazos m ON m.id=p.mazo_id ORDER BY p.id DESC LIMIT 15")->fetchAll();
+$terminadas = (int)$pdo->query("SELECT COUNT(*) FROM partidas WHERE estado='terminada'")->fetchColumn();
 cabecera('Inicio', 'portada');
 ?>
 <main class="centro">
@@ -21,11 +22,17 @@ cabecera('Inicio', 'portada');
       <p class="error oculto" id="err"></p>
     </form>
     <p style="margin-top:14px"><a href="mazos.php">Administrar mazos personalizados</a></p>
-    <h2 style="margin-top:20px">Partidas recientes</h2>
+    <div class="barra" style="margin-top:20px">
+      <h2 style="margin:0">Partidas recientes</h2>
+      <?php if ($terminadas): ?><button class="btn btn-peligro" id="limpiar" style="min-height:36px;padding:6px 14px;font-size:.9rem">Borrar terminadas (<?= (int)$terminadas ?>)</button><?php endif ?>
+    </div>
     <table class="tabla"><thead><tr><th>Código</th><th>Mazo</th><th>Estado</th><th>Jug.</th><th></th></tr></thead><tbody>
     <?php foreach ($partidas as $p): ?>
       <tr><td><b><?= h($p['codigo']) ?></b></td><td><?= h($p['mazo']) ?></td><td><?= h($p['estado']) ?></td><td><?= (int)$p['jugadores'] ?></td>
-          <td><a class="btn btn-secundario" href="presentador.php?c=<?= h($p['codigo']) ?>">Abrir</a></td></tr>
+          <td><div class="acciones">
+            <a class="btn btn-secundario" href="presentador.php?c=<?= h($p['codigo']) ?>">Abrir</a>
+            <button class="mini borrar" data-codigo="<?= h($p['codigo']) ?>" title="Borrar partida">🗑</button>
+          </div></td></tr>
     <?php endforeach ?>
     <?php if (!$partidas): ?><tr><td colspan="5" class="tenue">Aún no hay partidas</td></tr><?php endif ?>
     </tbody></table>
@@ -39,5 +46,28 @@ document.getElementById('nueva').addEventListener('submit', async e => {
   if (!r.ok) { const el = document.getElementById('err'); el.textContent = r.error; el.classList.remove('oculto'); return; }
   location.href = 'presentador.php?c=' + r.codigo;
 });
+
+const post = (a, datos) => {
+  const fd = new FormData();
+  for (const [k, v] of Object.entries(datos)) fd.append(k, v);
+  if (LOT.k) fd.append('k', LOT.k);
+  return fetch('api.php?a=' + a, {method: 'POST', body: fd}).then(r => r.json());
+};
+
+for (const b of document.querySelectorAll('.borrar')) b.onclick = async () => {
+  const cod = b.dataset.codigo;
+  if (!confirm('¿Borrar la partida ' + cod + '? Se pierden sus jugadores y tableros.')) return;
+  const r = await post('borrar_partida', {codigo: cod});
+  if (!r.ok) return alert(r.error);
+  location.reload();
+};
+
+const limpiar = document.getElementById('limpiar');
+if (limpiar) limpiar.onclick = async () => {
+  if (!confirm('¿Borrar todas las partidas terminadas?')) return;
+  const r = await post('borrar_partidas_terminadas', {});
+  if (!r.ok) return alert(r.error);
+  location.reload();
+};
 </script>
 <?php pie();

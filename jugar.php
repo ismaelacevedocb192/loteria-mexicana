@@ -29,5 +29,5 @@ if (!$p) {
   <div id="aviso" class="aviso oculto"></div>
 </div>
 <script>window.CODIGO = <?= json_encode($codigo) ?>;</script>
-<script src="assets/jugar.js?v=1"></script>
+<script src="assets/jugar.js?v=<?= assetVer() ?>"></script>
 <?php pie();

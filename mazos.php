@@ -28,5 +28,5 @@ cabecera('Mazos', 'mazos');
   </form>
   <div class="rejilla-cartas" id="cartas"></div>
 </template>
-<script src="assets/mazos.js?v=1"></script>
+<script src="assets/mazos.js?v=<?= assetVer() ?>"></script>
 <?php pie();

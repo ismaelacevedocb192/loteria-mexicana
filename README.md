@@ -3,6 +3,7 @@
 Juego de Lotería para un salón: una **pantalla grande** (presentador) muestra un código QR con el que los jugadores reciben su tablero en el teléfono; luego canta las cartas en grande. Cada jugador marca su tablero 4×4 en el teléfono; el servidor **rechaza marcar cartas que aún no han salido**. Al llenar el tablero, el jugador pulsa **¡LOTERÍA!**, el servidor verifica y la pantalla grande lo anuncia.
 
 - Mazo clásico de 54 cartas con ilustraciones propias (SVG) y **mazos personalizados** (por ejemplo, conceptos de una materia) desde un panel.
+- Colores de las fiestas patrias y cintilla inferior con el nombre de la institución, configurable en `config.php` (`INSTITUCION`).
 - Avance manual o con temporizador.
 - El teléfono no muestra la carta actual ni resalta las salidas: el jugador debe estar atento a la pantalla.
 - PHP plano + MySQL (o SQLite para pruebas). Corre en hosting LAMP compartido y en Railway.
@@ -48,6 +49,7 @@ Juego de Lotería para un salón: una **pantalla grande** (presentador) muestra 
 5. Los jugadores tocan en su teléfono las cartas que van saliendo. Si tocan una que no ha salido, el teléfono solo vibra.
 6. Con 16 marcas se habilita **¡LOTERÍA!**. La pantalla grande muestra la alerta con **VÁLIDO** o **FALSO**; el presentador decide **Terminar (ganador)** o **Continuar**.
 7. Si el jugador recarga o cierra la página, recupera su tablero automáticamente en el mismo teléfono.
+8. En la portada, cada partida tiene un botón 🗑 para borrarla, y hay un botón para borrar de golpe todas las terminadas. Al borrar se eliminan también sus jugadores, tableros y marcas.
 
 Si `PRESENTADOR_CLAVE` está definida, abre las páginas de presentador con `?k=LA_CLAVE` una vez; queda guardada en una cookie.
 
@@ -61,8 +63,8 @@ En **Administrar mazos** crea un mazo y agrega cartas con número, nombre e imag
 # Pruebas (usan SQLite en memoria)
 php tests/run.php
 
-# Servidor local con SQLite
-DB_DSN=sqlite:$PWD/local.sqlite php -S 127.0.0.1:8080
+# Servidor local con SQLite (ignora config.local.php, no necesita MySQL)
+php -S 127.0.0.1:8080 tools/dev-router.php
 
 # Regenerar las cartas del mazo clásico
 php tools/generar_cartas.php

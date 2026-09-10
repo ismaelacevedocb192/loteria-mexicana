@@ -12,7 +12,7 @@
 
   const esc = s => String(s).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
   const cartaHTML = c => c.imagen
-    ? `<img src="${esc(c.imagen)}" alt="${esc(c.nombre)}">`
+    ? `<img src="${esc(c.imagen)}?v=${LOT.v}" alt="${esc(c.nombre)}">`
     : `<div class="carta-texto" style="background:hsl(${(c.numero * 47) % 360},55%,45%)">${c.numero}<br>${esc(c.nombre)}</div>`;
 
   function mostrar(id) { for (const p of ['lobby', 'juego', 'fin']) $(p).classList.toggle('oculto', p !== id); }

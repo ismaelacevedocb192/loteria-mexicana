@@ -136,6 +136,35 @@ function api_terminar(): void {
     jsonOk();
 }
 
+/** Borra una partida con sus jugadores, marcas y gritos. */
+function borrarPartidaPorId(int $id): void {
+    $pdo = getDB();
+    $st = $pdo->prepare("SELECT id FROM jugadores WHERE partida_id = ?");
+    $st->execute([$id]);
+    $jugadores = array_map('intval', $st->fetchAll(PDO::FETCH_COLUMN));
+    if ($jugadores) {
+        $in = implode(',', array_fill(0, count($jugadores), '?'));
+        $pdo->prepare("DELETE FROM marcas WHERE jugador_id IN ($in)")->execute($jugadores);
+    }
+    $pdo->prepare("DELETE FROM gritos WHERE partida_id = ?")->execute([$id]);
+    $pdo->prepare("DELETE FROM jugadores WHERE partida_id = ?")->execute([$id]);
+    $pdo->prepare("DELETE FROM partidas WHERE id = ?")->execute([$id]);
+}
+
+function api_borrar_partida(): void {
+    exigirClavePresentador();
+    $p = cargarPartida((string)param('codigo', ''));
+    borrarPartidaPorId((int)$p['id']);
+    jsonOk();
+}
+
+function api_borrar_partidas_terminadas(): void {
+    exigirClavePresentador();
+    $ids = getDB()->query("SELECT id FROM partidas WHERE estado = 'terminada'")->fetchAll(PDO::FETCH_COLUMN);
+    foreach ($ids as $id) borrarPartidaPorId((int)$id);
+    jsonOk(['borradas' => count($ids)]);
+}
+
 function api_config_auto(): void {
     exigirClavePresentador();
     $p = cargarPartida((string)param('codigo', ''));

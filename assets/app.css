@@ -48,6 +48,9 @@ form .btn { margin-top: 14px; width: 100%; }
 .tabla th, .tabla td { text-align: left; padding: 8px 6px; border-bottom: 1px solid #e6dcc8; }
 .tabla tbody tr:nth-child(odd) { background: rgba(0,0,0,.03); }
 .tabla .btn { min-height: 36px; padding: 6px 14px; font-size: .9rem; }
+.acciones { display: flex; gap: 4px; align-items: center; justify-content: flex-end; }
+.mini.borrar { font-size: 1.05rem; opacity: .55; }
+.mini.borrar:hover { opacity: 1; }
 .barra { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .lista { list-style: none; padding: 0; margin: 10px 0 0; }
 .lista li { padding: 8px 4px; border-bottom: 1px solid #e6dcc8; display: flex; justify-content: space-between; align-items: center; gap: 8px; }

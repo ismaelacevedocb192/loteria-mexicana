@@ -4,7 +4,10 @@
     {
       "name": "loteria-dev",
       "runtimeExecutable": "sh",
-      "runtimeArgs": ["-c", "DB_DSN=sqlite:$PWD/local.sqlite exec php -S 127.0.0.1:8080"],
+      "runtimeArgs": [
+        "-c",
+        "exec php -S 127.0.0.1:8080 tools/dev-router.php"
+      ],
       "port": 8080
     }
   ]

@@ -62,5 +62,5 @@ cabecera('Presentador ' . $codigo, 'presentador');
 </div>
 <script>window.CODIGO = <?= json_encode($codigo) ?>;</script>
 <script src="assets/qrcode.min.js"></script>
-<script src="assets/presentador.js?v=1"></script>
+<script src="assets/presentador.js?v=<?= assetVer() ?>"></script>
 <?php pie();

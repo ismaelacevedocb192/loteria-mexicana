@@ -6,4 +6,12 @@ Options -Indexes
   <FilesMatch "api\.php$">
     Header set Cache-Control "no-store"
   </FilesMatch>
+  # Las páginas se revalidan siempre; así un cambio de diseño se ve al recargar.
+  <FilesMatch "\.php$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+  # CSS, JS e imágenes llevan ?v= con la fecha del archivo, se pueden cachear.
+  <FilesMatch "\.(css|js|svg|png|jpe?g|webp)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
 </IfModule>
