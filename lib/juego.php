@@ -36,6 +36,16 @@ function generarTablero(array $idsMazo, array $tablerosExistentes): array {
     return array_map('intval', $tablero);
 }
 
+/**
+ * Forma comparable de un nombre: sin mayúsculas, sin acentos y con los
+ * espacios colapsados, para que "Ana", " ana " y "ANÁ" cuenten como el mismo.
+ */
+function normalizarNombre(string $nombre): string {
+    $n = mb_strtolower(trim($nombre), 'UTF-8');
+    $n = strtr($n, ['á'=>'a','é'=>'e','í'=>'i','ó'=>'o','ú'=>'u','ü'=>'u','ñ'=>'n','à'=>'a','è'=>'e','ì'=>'i','ò'=>'o','ù'=>'u']);
+    return preg_replace('/\s+/u', ' ', $n);
+}
+
 function cartasSalidas(array $orden, int $indice): array {
     if ($indice < 0) return [];
     return array_map('intval', array_slice($orden, 0, $indice + 1));

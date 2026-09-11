@@ -60,3 +60,11 @@ test('esLoteriaValida solo si las 16 salieron', function () {
     assertTrue(!esLoteriaValida($tablero, range(1, 15)));
     assertTrue(esLoteriaValida($tablero, array_reverse(range(1, 16))));
 });
+
+test('normalizarNombre ignora mayúsculas, acentos y espacios', function () {
+    assertEq('ana', normalizarNombre('  Ana '));
+    assertEq('ana', normalizarNombre('ANÁ'));
+    assertEq('jose luis', normalizarNombre('José   Luis'));
+    assertEq('nino', normalizarNombre('Niño'));
+    assertTrue(normalizarNombre('Ana') !== normalizarNombre('Ane'));
+});

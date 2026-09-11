@@ -3,3 +3,4 @@ uploads/*
 *.sqlite
 config.local.php
 loteria-servidor.zip
+loteria-servidor/

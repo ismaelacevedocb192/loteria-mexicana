@@ -4,8 +4,14 @@ require_once __DIR__ . '/lib/vista.php';
 exigirClaveVista();
 $pdo = getDB();
 $mazos = $pdo->query("SELECT m.id, m.nombre, (SELECT COUNT(*) FROM cartas c WHERE c.mazo_id=m.id) AS n FROM mazos m ORDER BY es_default DESC, nombre")->fetchAll();
-$partidas = $pdo->query("SELECT p.codigo, p.estado, p.creada, m.nombre AS mazo, (SELECT COUNT(*) FROM jugadores j WHERE j.partida_id=p.id) AS jugadores
-                         FROM partidas p JOIN mazos m ON m.id=p.mazo_id ORDER BY p.id DESC LIMIT 15")->fetchAll();
+$partidas = $pdo->query("SELECT p.codigo, p.estado, p.creada, m.nombre AS mazo,
+                                (SELECT COUNT(*) FROM jugadores j WHERE j.partida_id=p.id) AS jugadores,
+                                g.nombre AS ganador,
+                                (SELECT COUNT(*) FROM gritos gr WHERE gr.partida_id=p.id AND gr.valido=1) AS gritos_validos
+                         FROM partidas p
+                         JOIN mazos m ON m.id = p.mazo_id
+                         LEFT JOIN jugadores g ON g.id = p.ganador_id
+                         ORDER BY p.id DESC LIMIT 15")->fetchAll();
 $terminadas = (int)$pdo->query("SELECT COUNT(*) FROM partidas WHERE estado='terminada'")->fetchColumn();
 cabecera('Inicio', 'portada');
 ?>
@@ -26,15 +32,19 @@ cabecera('Inicio', 'portada');
       <h2 style="margin:0">Partidas recientes</h2>
       <?php if ($terminadas): ?><button class="btn btn-peligro" id="limpiar" style="min-height:36px;padding:6px 14px;font-size:.9rem">Borrar terminadas (<?= (int)$terminadas ?>)</button><?php endif ?>
     </div>
-    <table class="tabla"><thead><tr><th>Código</th><th>Mazo</th><th>Estado</th><th>Jug.</th><th></th></tr></thead><tbody>
+    <table class="tabla"><thead><tr><th>Código</th><th>Mazo</th><th>Estado</th><th>Jug.</th><th>Ganador</th><th></th></tr></thead><tbody>
     <?php foreach ($partidas as $p): ?>
       <tr><td><b><?= h($p['codigo']) ?></b></td><td><?= h($p['mazo']) ?></td><td><?= h($p['estado']) ?></td><td><?= (int)$p['jugadores'] ?></td>
+          <td><?php if ($p['ganador']): ?><span class="ganador-celda">🏆 <?= h($p['ganador']) ?></span>
+              <?php elseif ($p['estado'] === 'terminada'): ?><span class="tenue">sin ganador</span>
+              <?php elseif ($p['gritos_validos']): ?><span class="tenue">lotería cantada</span>
+              <?php else: ?><span class="tenue">—</span><?php endif ?></td>
           <td><div class="acciones">
             <a class="btn btn-secundario" href="presentador.php?c=<?= h($p['codigo']) ?>">Abrir</a>
             <button class="mini borrar" data-codigo="<?= h($p['codigo']) ?>" title="Borrar partida">🗑</button>
           </div></td></tr>
     <?php endforeach ?>
-    <?php if (!$partidas): ?><tr><td colspan="5" class="tenue">Aún no hay partidas</td></tr><?php endif ?>
+    <?php if (!$partidas): ?><tr><td colspan="6" class="tenue">Aún no hay partidas</td></tr><?php endif ?>
     </tbody></table>
   </div>
 </main>

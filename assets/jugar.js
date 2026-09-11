@@ -71,6 +71,7 @@
   $('formNombre').addEventListener('submit', async ev => {
     ev.preventDefault();
     const btn = ev.target.querySelector('button'); btn.disabled = true;
+    $('err').classList.add('oculto');
     const r = await api('unirse', {codigo: cod, nombre: new FormData(ev.target).get('nombre')});
     btn.disabled = false;
     if (!r.ok) { $('err').textContent = r.error; $('err').classList.remove('oculto'); return; }

@@ -68,7 +68,8 @@ function crearTablas(PDO $pdo): void {
         intervalo_seg INT NOT NULL DEFAULT 6, ganador_id INT NULL, creada $now, actualizada $now)$eng");
     $pdo->exec("CREATE TABLE IF NOT EXISTS jugadores (
         id $id, partida_id INT NOT NULL, nombre VARCHAR(30) NOT NULL, token VARCHAR(40) NOT NULL UNIQUE,
-        tablero TEXT NOT NULL, creado $now)$eng");
+        tablero TEXT NOT NULL, creado $now,
+        UNIQUE (partida_id, nombre))$eng");
     $pdo->exec("CREATE TABLE IF NOT EXISTS marcas (
         jugador_id INT NOT NULL, carta_id INT NOT NULL, marcada_en $now, PRIMARY KEY (jugador_id, carta_id))$eng");
     $pdo->exec("CREATE TABLE IF NOT EXISTS gritos (

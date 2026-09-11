@@ -33,6 +33,13 @@ function api_unirse(): void {
     $nombre = trim((string)param('nombre', ''));
     if ($nombre === '' || mb_strlen($nombre) > 30) throw new ApiException('Escribe un nombre de 1 a 30 caracteres', 400);
     if ($p['estado'] !== 'lobby') throw new ApiException('La partida ya empezó, ya no se puede entrar', 400);
+    $st = $pdo->prepare("SELECT nombre FROM jugadores WHERE partida_id = ?");
+    $st->execute([$p['id']]);
+    foreach ($st->fetchAll(PDO::FETCH_COLUMN) as $usado) {
+        if (normalizarNombre($usado) === normalizarNombre($nombre)) {
+            throw new ApiException('Ya hay un jugador con ese nombre en la partida. Escribe otro, por ejemplo agrega tu apellido.', 409);
+        }
+    }
     $st = $pdo->prepare("SELECT id FROM cartas WHERE mazo_id = ?");
     $st->execute([$p['mazo_id']]);
     $idsMazo = array_map('intval', $st->fetchAll(PDO::FETCH_COLUMN));

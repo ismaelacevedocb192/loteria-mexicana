@@ -195,3 +195,27 @@ test('borrar_partidas_terminadas solo borra las terminadas', function () {
     assertEq(1, (int)$pdo->query("SELECT COUNT(*) FROM partidas WHERE codigo='$viva'")->fetchColumn());
     assertEq(0, (int)$pdo->query("SELECT COUNT(*) FROM partidas WHERE estado='terminada'")->fetchColumn());
 });
+
+test('no se admiten dos jugadores con el mismo nombre en una partida', function () {
+    $cod = llamar('crear_partida', ['mazo_id' => mazoDefault()])['codigo'];
+    assertTrue(llamar('unirse', ['codigo' => $cod, 'nombre' => 'Ana'])['ok']);
+
+    $r = llamar('unirse', ['codigo' => $cod, 'nombre' => 'Ana']);
+    assertTrue(!$r['ok'], 'nombre idéntico');
+    assertTrue(str_contains($r['error'], 'Ya hay un jugador con ese nombre'), $r['error']);
+
+    assertTrue(!llamar('unirse', ['codigo' => $cod, 'nombre' => '  ana  '])['ok'], 'espacios y minúsculas');
+    assertTrue(!llamar('unirse', ['codigo' => $cod, 'nombre' => 'ANÁ'])['ok'], 'acentos');
+    assertTrue(llamar('unirse', ['codigo' => $cod, 'nombre' => 'Ana Sofía'])['ok'], 'nombre distinto sí entra');
+
+    // El mismo nombre en otra partida no estorba
+    $otra = llamar('crear_partida', ['mazo_id' => mazoDefault()])['codigo'];
+    assertTrue(llamar('unirse', ['codigo' => $otra, 'nombre' => 'Ana'])['ok']);
+});
+
+test('cada jugador tiene un token distinto', function () {
+    $cod = llamar('crear_partida', ['mazo_id' => mazoDefault()])['codigo'];
+    $tokens = [];
+    foreach (['Uno', 'Dos', 'Tres'] as $n) $tokens[] = llamar('unirse', ['codigo' => $cod, 'nombre' => $n])['token'];
+    assertEq(3, count(array_unique($tokens)));
+});

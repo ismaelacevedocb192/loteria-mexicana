@@ -43,13 +43,14 @@ Juego de Lotería para un salón: una **pantalla grande** (presentador) muestra 
 ## Cómo se juega
 
 1. **Inicio** → elige mazo → **Nueva partida**. Se abre la pantalla del presentador con el QR.
-2. Los jugadores escanean el QR (o abren `jugar.php?c=CÓDIGO`), escriben su nombre y reciben su tablero.
+2. Los jugadores escanean el QR (o abren `jugar.php?c=CÓDIGO`), escriben su nombre y reciben su tablero. No se admiten dos nombres iguales en la misma partida: la comparación ignora mayúsculas, acentos y espacios de más, así que "Ana" y " aná " cuentan como el mismo.
 3. El presentador pulsa **Iniciar partida**. Ya no entran más jugadores.
 4. **Siguiente** (o barra espaciadora / flecha derecha) canta la siguiente carta. **Auto** avanza sola cada N segundos. **P** pausa.
 5. Los jugadores tocan en su teléfono las cartas que van saliendo. Si tocan una que no ha salido, el teléfono solo vibra.
 6. Con 16 marcas se habilita **¡LOTERÍA!**. La pantalla grande muestra la alerta con **VÁLIDO** o **FALSO**; el presentador decide **Terminar (ganador)** o **Continuar**.
 7. Si el jugador recarga o cierra la página, recupera su tablero automáticamente en el mismo teléfono.
-8. En la portada, cada partida tiene un botón 🗑 para borrarla, y hay un botón para borrar de golpe todas las terminadas. Al borrar se eliminan también sus jugadores, tableros y marcas.
+8. La portada lista las partidas con su estado y su ganador.
+9. En la portada, cada partida tiene un botón 🗑 para borrarla, y hay un botón para borrar de golpe todas las terminadas. Al borrar se eliminan también sus jugadores, tableros y marcas.
 
 Si `PRESENTADOR_CLAVE` está definida, abre las páginas de presentador con `?k=LA_CLAVE` una vez; queda guardada en una cookie.
 
