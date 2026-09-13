@@ -63,6 +63,10 @@ cabecera('Inicio', 'portada');
     <?php endforeach ?>
     <?php if (!$partidas): ?><tr><td colspan="6" class="tenue">Aún no hay partidas</td></tr><?php endif ?>
     </tbody></table>
+    <p class="licencia">
+      Software libre bajo la <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">Licencia Pública General GNU v3</a>.
+      <?php if (REPO_URL !== ''): ?><br>Código fuente en <a href="<?= h(REPO_URL) ?>" target="_blank" rel="noopener">GitHub</a>.<?php endif ?>
+    </p>
   </div>
 </main>
 <script>

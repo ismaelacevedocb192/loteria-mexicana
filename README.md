@@ -1,5 +1,7 @@
 # 🎉 Lotería Mexicana
 
+> *Dedicado a mi hermosa esposa Mayeli y a mi bebé.*
+
 Juego de Lotería para el salón de clases. Una **pantalla grande** canta las cartas y los alumnos marcan su tablero **desde su teléfono**, sin instalar nada: entran escaneando un código QR.
 
 [![Licencia: GPL v3](https://img.shields.io/badge/Licencia-GPLv3-006847.svg)](https://www.gnu.org/licenses/gpl-3.0)

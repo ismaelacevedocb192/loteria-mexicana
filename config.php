@@ -29,6 +29,9 @@ if (!defined('DB_PASS')) define('DB_PASS', getenv('DB_PASS') ?: '');
 // Si no está vacía, presentador.php, index.php, mazos.php y las acciones de presentador la exigen (?k=clave).
 if (!defined('PRESENTADOR_CLAVE')) define('PRESENTADOR_CLAVE', getenv('PRESENTADOR_CLAVE') ?: '');
 
+// Dirección del código fuente, para la leyenda de licencia de la portada.
+if (!defined('REPO_URL')) define('REPO_URL', getenv('REPO_URL') ?: 'https://github.com/ismaelacevedocb192/loteria-mexicana');
+
 // Texto de la cintilla inferior. Vacío ('') la oculta.
 if (!defined('INSTITUCION')) define('INSTITUCION', getenv('INSTITUCION') ?: 'Academia Local de Humanidades');
 
