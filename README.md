@@ -71,6 +71,8 @@ La portada lista las partidas recientes con su estado y su ganador, y permite bo
 
 Todo se ajusta en `config.php`, o mejor en tu `config.local.php` para no tocar el archivo original:
 
+Los valores por defecto viven en `lib/constantes.php`, así que una instalación que conserve un `config.php` de una versión anterior sigue funcionando cuando el programa estrena una opción nueva.
+
 | Constante | Para qué sirve |
 |---|---|
 | `DB_DSN`, `DB_USER`, `DB_PASS` | Conexión a la base de datos. |
@@ -102,6 +104,7 @@ php tools/generar_cartas.php
 | `mazos.php` | Panel de mazos personalizados. |
 | `api.php` | Único punto de entrada JSON, con `?a=accion`. |
 | `lib/juego.php` | Lógica pura: barajar, armar tableros, validar marcas y loterías. |
+| `lib/constantes.php` | Valores por defecto de toda la configuración. |
 | `lib/api_*.php` | Acciones del API por área. |
 | `cartas/` | Los 54 SVG del mazo clásico. |
 | `tests/` | Pruebas del juego y del API. |

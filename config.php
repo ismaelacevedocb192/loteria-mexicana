@@ -18,25 +18,22 @@
  */
 // Configuración. En Railway se leen variables de entorno; en LAMP edita las constantes
 // o crea config.local.php (ignorado por git) que las redefina con define() antes.
+// Tus credenciales van aquí o, mejor, en config.local.php (no se sube a git).
 if (file_exists(__DIR__ . '/config.local.php')) require __DIR__ . '/config.local.php';
 
 date_default_timezone_set('America/Mexico_City');
 
-if (!defined('DB_DSN'))  define('DB_DSN',  getenv('DB_DSN')  ?: 'mysql:host=localhost;dbname=loteria;charset=utf8mb4');
-if (!defined('DB_USER')) define('DB_USER', getenv('DB_USER') ?: 'root');
-if (!defined('DB_PASS')) define('DB_PASS', getenv('DB_PASS') ?: '');
+// Base de datos. Cámbialas aquí si no usas config.local.php.
+// define('DB_DSN',  'mysql:host=localhost;dbname=NOMBRE_BD;charset=utf8mb4');
+// define('DB_USER', 'USUARIO_BD');
+// define('DB_PASS', 'CONTRASEÑA');
 
-// Si no está vacía, presentador.php, index.php, mazos.php y las acciones de presentador la exigen (?k=clave).
-if (!defined('PRESENTADOR_CLAVE')) define('PRESENTADOR_CLAVE', getenv('PRESENTADOR_CLAVE') ?: '');
+// Otras opciones, todas con valor por defecto en lib/constantes.php:
+//   PRESENTADOR_CLAVE   clave de las pantallas de presentador ('' = sin clave)
+//   INSTITUCION         texto de la cintilla inferior ('' = ocultarla)
+//   REPO_URL            enlace al código fuente en la portada ('' = ocultarlo)
+//   INTERVALO_SONDEO_MS cada cuánto consultan el servidor pantalla y teléfonos
+//   BASE_URL            URL pública, si la que deduce PHP no es la correcta
 
-// Dirección del código fuente, para la leyenda de licencia de la portada.
-if (!defined('REPO_URL')) define('REPO_URL', getenv('REPO_URL') ?: 'https://github.com/ismaelacevedocb192/loteria-mexicana');
-
-// Texto de la cintilla inferior. Vacío ('') la oculta.
-if (!defined('INSTITUCION')) define('INSTITUCION', getenv('INSTITUCION') ?: 'Academia Local de Humanidades');
-
-// Cada cuánto consultan el servidor la pantalla grande y los teléfonos.
-if (!defined('INTERVALO_SONDEO_MS')) define('INTERVALO_SONDEO_MS', 1500);
-
-// URL base pública (sin diagonal final). Vacío = se deduce de la petición.
-if (!defined('BASE_URL')) define('BASE_URL', getenv('BASE_URL') ?: '');
+// Rellena todo lo que no se haya definido arriba.
+require_once __DIR__ . '/lib/constantes.php';

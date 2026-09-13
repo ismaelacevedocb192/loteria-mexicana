@@ -17,6 +17,7 @@
  * junto con este programa. Si no, consulta <https://www.gnu.org/licenses/>.
  */
 require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/lib/constantes.php';
 
 function dbDsn(): string {
     return defined('LOTERIA_TEST_DSN') ? LOTERIA_TEST_DSN : DB_DSN;

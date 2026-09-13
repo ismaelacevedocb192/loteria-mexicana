@@ -17,6 +17,7 @@
  * junto con este programa. Si no, consulta <https://www.gnu.org/licenses/>.
  */
 require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/constantes.php';
 
 class ApiException extends Exception {}
 
