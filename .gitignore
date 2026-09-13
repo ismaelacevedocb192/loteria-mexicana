@@ -1,6 +1,18 @@
+# Configuración local con credenciales (nunca se sube)
+config.local.php
+
+# Base de datos de pruebas y archivos generados
+*.sqlite
 uploads/*
 !uploads/.gitkeep
-*.sqlite
-config.local.php
+
+# Paquetes de despliegue
 loteria-servidor.zip
 loteria-servidor/
+
+# Editores y sistema
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

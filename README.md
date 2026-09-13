@@ -1,74 +1,124 @@
-# Lotería web
+# 🎉 Lotería Mexicana
 
-Juego de Lotería para un salón: una **pantalla grande** (presentador) muestra un código QR con el que los jugadores reciben su tablero en el teléfono; luego canta las cartas en grande. Cada jugador marca su tablero 4×4 en el teléfono; el servidor **rechaza marcar cartas que aún no han salido**. Al llenar el tablero, el jugador pulsa **¡LOTERÍA!**, el servidor verifica y la pantalla grande lo anuncia.
+Juego de Lotería para el salón de clases. Una **pantalla grande** canta las cartas y los alumnos marcan su tablero **desde su teléfono**, sin instalar nada: entran escaneando un código QR.
 
-- Mazo clásico de 54 cartas con ilustraciones propias (SVG) y **mazos personalizados** (por ejemplo, conceptos de una materia) desde un panel.
-- Colores de las fiestas patrias y cintilla inferior con el nombre de la institución, configurable en `config.php` (`INSTITUCION`).
-- Avance manual o con temporizador.
-- El teléfono no muestra la carta actual ni resalta las salidas: el jugador debe estar atento a la pantalla.
-- PHP plano + MySQL (o SQLite para pruebas). Corre en hosting LAMP compartido y en Railway.
+[![Licencia: GPL v3](https://img.shields.io/badge/Licencia-GPLv3-006847.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![PHP](https://img.shields.io/badge/PHP-8.1%2B-777bb4.svg)](https://www.php.net/)
+[![Sin dependencias](https://img.shields.io/badge/dependencias-ninguna-ce1126.svg)](#por-qué-php-plano)
 
-## Requisitos
+![Pantalla del presentador cantando una carta](docs/img/presentador.png)
 
-- PHP 8.1 o superior con `pdo_mysql` (y opcionalmente `pdo_sqlite` para pruebas locales), `mbstring`, `fileinfo`.
-- MySQL / MariaDB.
+## Qué hace
 
-## Instalación en LAMP (hosting compartido)
+- **Reparte los tableros con un QR.** El profesor proyecta el código y cada quien entra con su nombre. No hay registro ni contraseñas para los jugadores.
+- **Canta las cartas en grande**, manualmente o con temporizador, con la tira de las últimas que salieron.
+- **Valida cada marca en el servidor.** Un jugador no puede marcar una carta que todavía no ha salido: el teléfono solo vibra y la carta se sacude, sin decir por qué.
+- **No da pistas.** El teléfono no muestra la carta actual ni resalta las que ya salieron, así que hay que estar atento a la pantalla.
+- **Verifica el grito de lotería.** El botón se habilita al llenar el tablero; el servidor comprueba que las 16 cartas hayan salido de verdad y la pantalla grande anuncia **VÁLIDO** o **FALSA ALARMA**.
+- **Lleva el registro** de jugadores, marcas y ganadores, y lo muestra en la portada.
+- **Dos mazos.** El clásico de 54 cartas, con ilustraciones propias en SVG, y los que tú crees con tus propios conceptos.
 
-1. Sube la carpeta completa al servidor (por ejemplo a `public_html/loteria`).
-2. Crea una base de datos MySQL vacía.
-3. Edita `config.php` **o** crea `config.local.php` (no se sube a git) con:
-   ```php
-   <?php
-   define('DB_DSN', 'mysql:host=localhost;dbname=TU_BD;charset=utf8mb4');
-   define('DB_USER', 'TU_USUARIO');
-   define('DB_PASS', 'TU_CLAVE');
-   // define('PRESENTADOR_CLAVE', 'algo-secreto'); // opcional: protege las páginas de presentador
-   ```
-4. Da permisos de escritura a `uploads/` (para imágenes de mazos personalizados).
-5. Abre `https://tu-dominio/loteria/`. Las tablas y el mazo clásico se crean solos en la primera visita.
+### Mazos personalizados
 
-## Despliegue en Railway
+Sirve para repasar cualquier materia: crea un mazo con los conceptos del tema y juega lotería con ellos. Cada carta lleva número, nombre e imagen opcional. Si no le pones imagen, se dibuja el nombre sobre un color. Con 16 cartas ya se puede jugar.
 
-1. Crea un proyecto desde este repositorio; Railway detecta el `Dockerfile`.
-2. Agrega un servicio **MySQL** al proyecto.
-3. En el servicio web define las variables:
-   - `DB_DSN` = `mysql:host=${{MySQL.MYSQLHOST}};port=${{MySQL.MYSQLPORT}};dbname=${{MySQL.MYSQLDATABASE}};charset=utf8mb4`
-   - `DB_USER` = `${{MySQL.MYSQLUSER}}`
-   - `DB_PASS` = `${{MySQL.MYSQLPASSWORD}}`
-   - `PRESENTADOR_CLAVE` (recomendado en Railway, porque la URL es pública)
-   - `BASE_URL` (opcional) = `https://tu-app.up.railway.app`
-4. Genera un dominio público. Nota: `uploads/` es efímero en Railway; si usas imágenes en mazos personalizados, monta un volumen en `/var/www/html/uploads`.
+## Cómo se ve
+
+| Reparto de tableros | Tablero en el teléfono |
+|---|---|
+| ![Código QR para que los jugadores entren](docs/img/lobby.png) | ![Tablero de 4x4 en un teléfono](docs/img/telefono.png) |
+
+![Portada con la lista de partidas y sus ganadores](docs/img/portada.png)
+
+## Instalación en un hosting con cPanel
+
+1. Sube el contenido de este repositorio a una carpeta de tu sitio, por ejemplo `public_html/loteria`.
+2. Crea una base de datos MySQL vacía, con su usuario y contraseña. **No hace falta importar ningún SQL**: las tablas y el mazo clásico se crean solos en la primera visita.
+3. Copia `config.example.php` como `config.local.php` y escribe ahí tus datos de conexión.
+4. Da permiso de escritura a la carpeta `uploads/`, que guarda las imágenes de los mazos personalizados.
+5. Abre `https://tu-dominio/loteria/`.
+
+Si algo falla en la conexión, la propia página te dice qué archivo busca y si lo encontró.
+
+## Instalación en Railway
+
+Railway detecta el `Dockerfile` incluido. Agrega un servicio MySQL al proyecto y define estas variables en el servicio web:
+
+| Variable | Valor |
+|---|---|
+| `DB_DSN` | `mysql:host=${{MySQL.MYSQLHOST}};port=${{MySQL.MYSQLPORT}};dbname=${{MySQL.MYSQLDATABASE}};charset=utf8mb4` |
+| `DB_USER` | `${{MySQL.MYSQLUSER}}` |
+| `DB_PASS` | `${{MySQL.MYSQLPASSWORD}}` |
+| `PRESENTADOR_CLAVE` | recomendada, porque la URL es pública |
+| `BASE_URL` | opcional, el dominio público de la app |
+
+Ten en cuenta que en Railway la carpeta `uploads/` se borra en cada despliegue, salvo que montes un volumen en `/var/www/html/uploads`.
 
 ## Cómo se juega
 
-1. **Inicio** → elige mazo → **Nueva partida**. Se abre la pantalla del presentador con el QR.
-2. Los jugadores escanean el QR (o abren `jugar.php?c=CÓDIGO`), escriben su nombre y reciben su tablero. No se admiten dos nombres iguales en la misma partida: la comparación ignora mayúsculas, acentos y espacios de más, así que "Ana" y " aná " cuentan como el mismo.
-3. El presentador pulsa **Iniciar partida**. Ya no entran más jugadores.
-4. **Siguiente** (o barra espaciadora / flecha derecha) canta la siguiente carta. **Auto** avanza sola cada N segundos. **P** pausa.
-5. Los jugadores tocan en su teléfono las cartas que van saliendo. Si tocan una que no ha salido, el teléfono solo vibra.
-6. Con 16 marcas se habilita **¡LOTERÍA!**. La pantalla grande muestra la alerta con **VÁLIDO** o **FALSO**; el presentador decide **Terminar (ganador)** o **Continuar**.
-7. Si el jugador recarga o cierra la página, recupera su tablero automáticamente en el mismo teléfono.
-8. La portada lista las partidas con su estado y su ganador.
-9. En la portada, cada partida tiene un botón 🗑 para borrarla, y hay un botón para borrar de golpe todas las terminadas. Al borrar se eliminan también sus jugadores, tableros y marcas.
+1. En la portada eliges el mazo y pulsas **Nueva partida**. Se abre la pantalla del presentador con el QR.
+2. Los alumnos escanean, escriben su nombre y reciben un tablero distinto cada uno. No se admiten dos nombres iguales en la misma partida: la comparación ignora mayúsculas, acentos y espacios de más.
+3. Pulsas **Iniciar partida**. A partir de ahí ya no entra nadie más.
+4. **Siguiente** canta una carta. También sirven la barra espaciadora y la flecha derecha. **Auto** avanza sola cada N segundos y **P** pausa.
+5. Al llenar su tablero, el jugador pulsa **¡LOTERÍA!** y muestra su teléfono. Tú decides si terminas la partida o si el juego continúa.
+6. Si un teléfono se recarga o se bloquea, recupera su tablero y sus marcas al volver a abrir la página.
 
-Si `PRESENTADOR_CLAVE` está definida, abre las páginas de presentador con `?k=LA_CLAVE` una vez; queda guardada en una cookie.
+La portada lista las partidas recientes con su estado y su ganador, y permite borrarlas una por una o todas las terminadas de golpe.
 
-## Mazos personalizados
+## Configuración
 
-En **Administrar mazos** crea un mazo y agrega cartas con número, nombre e imagen opcional (PNG, JPG, WEBP o SVG, máx. 2 MB). Sin imagen, la carta muestra el nombre sobre un fondo de color. Se necesitan al menos 16 cartas para jugar. El mazo clásico no se puede editar.
+Todo se ajusta en `config.php`, o mejor en tu `config.local.php` para no tocar el archivo original:
+
+| Constante | Para qué sirve |
+|---|---|
+| `DB_DSN`, `DB_USER`, `DB_PASS` | Conexión a la base de datos. |
+| `PRESENTADOR_CLAVE` | Si no está vacía, protege portada, presentador y mazos. Entras una vez con `?k=tu-clave` y queda en una cookie. |
+| `INSTITUCION` | Texto de la cintilla inferior. Vacío la oculta. |
+| `INTERVALO_SONDEO_MS` | Cada cuánto consultan el servidor la pantalla y los teléfonos. |
+| `BASE_URL` | URL pública, si la que deduce PHP no es la correcta. |
 
 ## Desarrollo
 
 ```bash
+# Servidor local con SQLite: no necesita MySQL ni tu config.local.php
+php -S 127.0.0.1:8080 tools/dev-router.php
+
 # Pruebas (usan SQLite en memoria)
 php tests/run.php
 
-# Servidor local con SQLite (ignora config.local.php, no necesita MySQL)
-php -S 127.0.0.1:8080 tools/dev-router.php
-
-# Regenerar las cartas del mazo clásico
+# Regenerar los 54 SVG del mazo clásico
 php tools/generar_cartas.php
 ```
 
-Estructura: `api.php` es el único endpoint JSON (`?a=accion`); la lógica pura está en `lib/juego.php`; las pantallas son `index.php`, `presentador.php`, `jugar.php` y `mazos.php` con su JS en `assets/`.
+### Cómo está organizado
+
+| Ruta | Qué contiene |
+|---|---|
+| `index.php` | Portada: crear partidas, verlas y borrarlas. |
+| `presentador.php` | Pantalla grande: QR, carta cantada y controles. |
+| `jugar.php` | Tablero del teléfono. |
+| `mazos.php` | Panel de mazos personalizados. |
+| `api.php` | Único punto de entrada JSON, con `?a=accion`. |
+| `lib/juego.php` | Lógica pura: barajar, armar tableros, validar marcas y loterías. |
+| `lib/api_*.php` | Acciones del API por área. |
+| `cartas/` | Los 54 SVG del mazo clásico. |
+| `tests/` | Pruebas del juego y del API. |
+| `docs/diseno.md` | Documento de diseño con las decisiones tomadas. |
+
+### Por qué PHP plano
+
+El destino es un hosting compartido con cPanel, donde no hay Node, ni Composer, ni WebSockets. Por eso todo es PHP con PDO y JavaScript sin librerías, y el tiempo real se resuelve con un sondeo cada segundo y medio, que con un grupo entero de alumnos es carga insignificante. La única dependencia externa es `qrcode.js`, incluida en el repositorio.
+
+## Créditos
+
+La **idea, el diseño del juego y las decisiones de producto** son de **Ismael A. Acevedo Rendón**: cómo se reparten los tableros, que la validación viva en el servidor, que el teléfono no dé pistas para obligar a estar atento, el registro de jugadores y ganadores, y la identidad visual de fiestas patrias.
+
+El **código fue generado íntegramente con [Claude Code](https://claude.com/claude-code)** (Anthropic), a partir de esas indicaciones y en diálogo con el autor. No se escribió a mano ninguna línea del programa: cada archivo, incluidas las 54 ilustraciones en SVG y las pruebas automatizadas, se produjo en esa conversación de trabajo.
+
+Los nombres y la numeración de las cartas son los tradicionales de la Lotería mexicana, de dominio público. Las ilustraciones son originales de este proyecto y no reproducen el arte de ninguna baraja comercial.
+
+## Licencia
+
+Este programa es software libre bajo la **Licencia Pública General GNU, versión 3** o posterior. Puedes usarlo, estudiarlo, compartirlo y modificarlo; si distribuyes una versión modificada, debe conservar esta misma licencia. El texto completo está en [LICENSE](LICENSE).
+
+Se distribuye sin ninguna garantía. Consulta la licencia para los detalles.

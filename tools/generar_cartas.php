@@ -1,4 +1,21 @@
 <?php
+/*
+ * Lotería Mexicana — juego de lotería para el salón de clases.
+ * Copyright (C) 2026 Ismael A. Acevedo Rendón
+ *
+ * Este programa es software libre: puedes redistribuirlo y/o modificarlo
+ * bajo los términos de la Licencia Pública General GNU publicada por la
+ * Free Software Foundation, ya sea la versión 3 de la Licencia o (a tu
+ * elección) cualquier versión posterior.
+ *
+ * Este programa se distribuye con la esperanza de que sea útil, pero SIN
+ * NINGUNA GARANTÍA; ni siquiera la garantía implícita de COMERCIABILIDAD o
+ * IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Consulta la Licencia Pública
+ * General GNU para más detalles.
+ *
+ * Deberías haber recibido una copia de la Licencia Pública General GNU
+ * junto con este programa. Si no, consulta <https://www.gnu.org/licenses/>.
+ */
 // Genera cartas/NN.svg para el mazo clásico. Ilustraciones geométricas propias.
 // Uso: php tools/generar_cartas.php
 require_once __DIR__ . '/../lib/mazo_clasico.php';
@@ -478,6 +495,8 @@ function carta_svg(int $n, string $nombre, string $figura): string {
     $tam = mb_strlen($nombre) > 12 ? 20 : 24;
     return <<<SVG
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 420" width="300" height="420">
+<!-- Lotería Mexicana - ilustración propia. Copyright (C) 2026 Ismael A. Acevedo Rendón.
+     Licencia: GNU GPL v3 o posterior. https://www.gnu.org/licenses/gpl-3.0.html -->
 <rect width="300" height="420" rx="14" fill="#f6e7c8"/>
 <rect x="8" y="8" width="284" height="404" rx="10" fill="none" stroke="#ce1126" stroke-width="4"/>
 <rect x="16" y="16" width="268" height="388" rx="8" fill="none" stroke="#006847" stroke-width="1.5"/>
