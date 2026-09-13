@@ -42,7 +42,7 @@ $lot_valores = [
     'BASE_URL' => getenv('BASE_URL') ?: '',
 
     // Cintilla inferior. Vacía = no se muestra.
-    'INSTITUCION' => getenv('INSTITUCION') ?: 'Academia Local de Humanidades',
+    'INSTITUCION' => getenv('INSTITUCION') ?: 'Dedicado a mi hermosa esposa Mayeli y a nuestro bebé',
 
     // Código fuente, para la leyenda de licencia. Vacío = no se muestra.
     'REPO_URL' => getenv('REPO_URL') ?: 'https://github.com/ismaelacevedocb192/loteria-mexicana',
