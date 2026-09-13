@@ -1,6 +1,6 @@
 # 🎉 Lotería Mexicana
 
-> *Dedicado a mi hermosa esposa Mayeli y a mi bebé.*
+> *Dedicado a mi hermosa esposa Mayeli y a nuestro bebé.*
 
 Juego de Lotería para el salón de clases. Una **pantalla grande** canta las cartas y los alumnos marcan su tablero **desde su teléfono**, sin instalar nada: entran escaneando un código QR.
 
